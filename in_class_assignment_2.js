@@ -10,3 +10,17 @@ let products = [
 // };
 
 // console.log(getProductsByCategory(products, "Electronics"));
+
+// Task 2
+
+function applyDiscount(products, discountRate) {
+    return products.map(product => ({
+        ...product,
+        price: product.price  - (product.price * discountRate),
+        name: product.name.toUpperCase()
+    }
+
+    ))
+}
+
+console.log(applyDiscount(products, .1));
